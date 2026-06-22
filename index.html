@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07142e" />
+    <title>Bosumaa Premium Birthday Edition ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="night-sky" aria-hidden="true">
+      <div id="stars" class="stars"></div>
+      <div id="ambient-effects" class="ambient-effects"></div>
+      <canvas id="fireworks" class="fireworks"></canvas>
+    </div>
+
+    <audio id="birthday-music" src="music/kesariya.webm" loop preload="auto"></audio>
+    <button id="music-toggle" class="music-toggle hidden" type="button" aria-label="Play or pause music">
+      Pause Music
+    </button>
+
+    <main class="app-shell">
+      <section class="screen active" id="opening" data-screen>
+        <div class="hero-content">
+          <p class="eyebrow">Bosumaa...</p>
+          <h1>I Made Something Special For You ❤️</h1>
+          <button class="primary-button" type="button" data-start>Open My Heart ❤️</button>
+        </div>
+      </section>
+
+      <section class="screen" id="countdown" data-screen>
+        <div class="center-stack">
+          <p class="eyebrow">Your surprise begins in</p>
+          <div id="countdown-number" class="countdown-number">5</div>
+        </div>
+      </section>
+
+      <section class="screen" id="birthday" data-screen>
+        <div class="center-stack">
+          <div class="sparkle-cluster" aria-hidden="true"></div>
+          <h2>🎂 Happy Birthday Bosumaa ❤️</h2>
+          <p class="soft-copy">Tonight, every star is celebrating you.</p>
+          <button class="primary-button" type="button" data-go="question-1">Continue ❤️</button>
+        </div>
+      </section>
+
+      <section class="screen" id="question-1" data-screen>
+        <article class="panel quiz" data-quiz="q1" data-correct="a" data-success="❤️ Correct Bosumaa ❤️" data-effect="hearts">
+          <p class="eyebrow">Chapter One</p>
+          <h2>Who is the Most Beautiful Girl in the World?</h2>
+          <div class="options">
+            <button type="button" data-answer="a">A) Sneha K (Bossu)</button>
+            <button type="button" data-answer="b">B) Samantha</button>
+            <button type="button" data-answer="c">C) Rashmika</button>
+            <button type="button" data-answer="d">D) Pooja Hegde</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+          <button class="primary-button next-action hidden" type="button" data-go="letter-1">Unlock Next Chapter ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="letter-1" data-screen>
+        <article class="letter-stage">
+          <div class="envelope" data-envelope>
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="letter-paper">
+              <p class="letter-text" data-typewriter="Bosumma You Are The Most Beautyfull Women In The World.You Beauty Spread Across Every Part Of You Both Inside And Outside.You Amaze me every day."></p>
+            </div>
+          </div>
+          <button class="primary-button" type="button" data-go="question-2">Open Next Chapter ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="question-2" data-screen>
+        <article class="panel quiz" data-quiz="q2" data-correct="c" data-success="❤️ Correct Bosumaa ❤️" data-effect="hearts-roses">
+          <p class="eyebrow">Chapter Two</p>
+          <h2>When is OUR Valentine's Day?</h2>
+          <div class="options">
+            <button type="button" data-answer="a">A) February 14</button>
+            <button type="button" data-answer="b">B) November 18</button>
+            <button type="button" data-answer="c">C) April 11</button>
+            <button type="button" data-answer="d">D) June 26</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+          <button class="primary-button next-action hidden" type="button" data-go="memory-book">Open Memory Book ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="memory-book" data-screen>
+        <article class="album">
+          <p class="eyebrow">Our Memory Book</p>
+          <h2>Beautiful Moments With You</h2>
+          <div class="photo-frame">
+            <img id="album-photo" src="photos/photo01.jpg" alt="Memory photo 1" />
+          </div>
+          <p id="photo-caption" class="photo-caption">Caption placeholder for photo 1</p>
+          <p id="photo-count" class="photo-count">Photo 1 of 57</p>
+          <div class="album-controls">
+            <button type="button" id="prev-photo" aria-label="Previous photo">Previous</button>
+            <button type="button" id="next-photo" aria-label="Next photo">Next</button>
+          </div>
+          <button class="primary-button" type="button" data-go="question-3">Continue ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="question-3" data-screen>
+        <article class="panel quiz" data-quiz="q3" data-correct="d" data-success="❤️ Correct Bosumaa ❤️" data-effect="hearts-roses">
+          <p class="eyebrow">Chapter Three</p>
+          <h2>What is my favorite thing about you?</h2>
+          <div class="options">
+            <button type="button" data-answer="a">A) Your Smile</button>
+            <button type="button" data-answer="b">B) Your Eyes</button>
+            <button type="button" data-answer="c">C) Your Voice</button>
+            <button type="button" data-answer="d">D) Everything</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+          <button class="primary-button next-action hidden" type="button" data-go="reasons">See Why ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="reasons" data-screen>
+        <article class="reasons">
+          <p class="eyebrow">Reasons I Love You</p>
+          <h2>Little Pieces Of My Heart</h2>
+          <div class="reason-grid">
+            <div class="reason-card">Your Smile</div>
+            <div class="reason-card">Your Kindness</div>
+            <div class="reason-card">Your Beautiful Soul</div>
+            <div class="reason-card">Your Caring Heart</div>
+            <div class="reason-card">Because You're You</div>
+          </div>
+          <button class="primary-button" type="button" data-go="question-4">Continue ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="question-4" data-screen>
+        <article class="panel quiz" data-quiz="q4" data-correct="c" data-success="❤️ Correct Bosumaa ❤️" data-effect="rings">
+          <p class="eyebrow">Chapter Four</p>
+          <h2>How much do I love you?</h2>
+          <div class="options">
+            <button type="button" data-answer="a">A) 100%</button>
+            <button type="button" data-answer="b">B) 1000%</button>
+            <button type="button" data-answer="c">C) Infinite ♾️</button>
+            <button type="button" data-answer="d">D) Very Much</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+          <button class="primary-button next-action hidden" type="button" data-go="letter-2">Open Love Letter ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="letter-2" data-screen>
+        <article class="letter-stage">
+          <div class="envelope" data-envelope>
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="letter-paper">
+              <p class="letter-text" data-typewriter="Bosu i am crazly madly in love with you.You The One Who I Am Thinking Of Everyday When i Wake Up ,When I go To Sleep And Inn Between The Days.My Heart Is Full Of You Di.I Dont Know Even Know The Word Love Can Expess my Love For You.You Are Beyond Everything.I want To Be There For You.In Your HAppy Moments,When You Are Sad.When You Are Moody also When The Days You Forget To Take Medicine For You Mental Illeness.Espacially at That Time.I want To be there for you.I want our room full of you.I want our room fill with your smell.Full of You.I will not give you a false promise like i wont hurt you,DisAgree with you,Make You Sad or Fight With You.But What Ever Happens You Will My First Priority.I will maximum try to put aside my ego.(BOSU > MY EGO).I promise you that i will only choose you,Honest With you.Open With You.I will make time for you.Get You Opinion on my life things.You Will my first priority above mine.I will Give what all things you expect from me.Respect,Love,Space, All my Attention,Affection,Care,Congratulating you,praising you,being there for you when you are down.I will Never Give up on you.i will Fight For You.I want to grow old with you.i want us toto wake up together,kiss you gudu morning,wake up together,Have morning chores together like brushing etc etc,Cook Together Eat Together.I want To spend time with you cudling in morning ,i want to go out with you for tea or cofee.trip with you,explore the life with you.laugh together cry together.I PROMISE YOU .THE THINGS I SAID WILL NOT BE JUST WORDS I PROMISE TO DOT IT LIFE.A LIFE TOGETHER.I LOVE EVERY MOMOENT WITH YOU."></p>
+            </div>
+          </div>
+          <button class="primary-button" type="button" data-go="final-question">Continue ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="final-question" data-screen>
+        <article class="panel final-note">
+          <p class="eyebrow">Before we reach the end...</p>
+          <h2>Do you know one thing?</h2>
+          <p>You will always be my favorite person ❤️</p>
+          <div class="two-buttons">
+            <button class="primary-button" type="button" data-go="final-surprise">I Know ❤️</button>
+            <button class="primary-button" type="button" data-go="final-surprise">Of Course ❤️</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="screen" id="final-surprise" data-screen>
+        <article class="finale">
+          <h3>Aravind ❤️ Sneha</h3>
+          <h3>Husband ❤️ Wife</h3>
+          <p class="glow-line">Forever Begins Again Every Day ❤️</p>
+          <div class="thank-you">
+            <p>Bosumaa...</p>
+            <p>Thank you for every smile.</p>
+            <p>Thank you for every laugh.</p>
+            <p>Thank you for every beautiful memory.</p>
+            <p>Thank you for being the most beautiful part of my life.</p>
+          </div>
+          <button class="primary-button" type="button" data-go="video-finale">One Last Gift ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="video-finale" data-screen>
+        <article class="gift">
+          <p class="eyebrow">🎁 One Last Gift For You ❤️</p>
+          <h2>Before this journey ends...</h2>
+          <p>I have one final surprise for you.</p>
+          <div class="video-wrap" data-video-player>
+            <button class="video-cover" type="button" data-play-video aria-label="Play final surprise video">
+              <span class="play-icon">▶</span>
+              <span class="play-copy">Play Final Surprise</span>
+            </button>
+            <video id="final-video" preload="metadata" controls playsinline>
+              <source src="assets/final-surprise.mp4" type="video/mp4" />
+              Your browser cannot play this video.
+            </video>
+          </div>
+          <button class="primary-button" type="button" data-go="ending">Finish ❤️</button>
+        </article>
+      </section>
+
+      <section class="screen" id="ending" data-screen>
+        <article class="ending">
+          <p>Forever Yours,</p>
+          <h2>Aravind ❤️</h2>
+          <p>❤️ END OF THIS BIRTHDAY SURPRISE ❤️</p>
+          <p>❤️ BUT NOT THE END OF OUR STORY ❤️</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
